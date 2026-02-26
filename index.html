@@ -157,35 +157,51 @@
 <section id="cek-kp">
 <div class="container">
 <h1 class="section-title">Waktunya Kamu Naik Pangkat</h1>
+<h1 class="section-title">Smart KP Analyzer</h1>
+<p class="section-sub">
+Sistem analisis otomatis untuk memprediksi waktu kenaikan pangkat Anda
+berdasarkan data kepegawaian.
+</p>
 
 <div class="cek-card">
 
     <div class="input-group">
-        <i class="fas fa-id-card"></i>
-        <input type="text" id="nipCek" placeholder="Masukkan NIP Anda">
-    </div>
+   
+
+     
+        <div class="input-icon">
+            <i class="fas fa-layer-group"></i>
+             <input type="text" id="nipCek" placeholder="Masukkan NIP Anda">
+   
+        </div>
+        </div>
 
     <div class="input-group">
-        <i class="fas fa-layer-group"></i>
-        <select id="golonganTerakhir">
-            <option value="">Pilih Golongan Terakhir</option>
-            <option value="2a">2A</option>
-            <option value="2b">2B</option>
-            <option value="2c">2C</option>
-            <option value="2d">2D</option>
-            <option value="3a">3A</option>
-            <option value="3b">3B</option>
-            <option value="3c">3C</option>
-            <option value="3d">3D</option>
-            <option value="4a">4A</option>
-            <option value="4b">4B</option>
-            <option value="4c">4C</option>
-            <option value="4d">4D</option>
-        </select>
+       
+        <div class="input-icon">
+            <i class="fas fa-layer-group"></i>
+            <select id="golonganTerakhir">
+                <option value="">Pilih Golongan Anda Sekarang</option>
+               
+                <option value="2a">II/a</option>
+                <option value="2b">II/b</option>
+                <option value="2c">II/c</option>
+                <option value="2d">II/d</option>
+                <option value="3a">III/a</option>
+                <option value="3b">III/b</option>
+                <option value="3c">III/c</option>
+                <option value="3d">III/d</option>
+                <option value="4a">IV/a</option>
+                <option value="4b">IV/b</option>
+                <option value="4c">IV/c</option>
+                <option value="4d">IV/d</option>
+            </select>
+        </div>
     </div>
 
+
     <button class="btn-elegant" onclick="cekKP()">
-        <i class="fas fa-search"></i> Cek Sekarang
+        <i class="fas fa-chart-line"></i> Analisis Sekarang
     </button>
 
     <div id="hasilKP" class="hasil-box"></div>
