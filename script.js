@@ -249,3 +249,31 @@ Keputusan final mengikuti regulasi resmi dan verifikasi administrasi.
 </p>
 `;
 }
+
+// =============================
+// AI FAQ INTERACTIVE
+// =============================
+
+document.querySelectorAll(".faq-trigger").forEach(item => {
+    item.addEventListener("click", () => {
+
+        const answerId = item.getAttribute("data-answer");
+        const answerBox = document.getElementById(answerId);
+
+        if (!answerBox.classList.contains("hidden")) {
+            answerBox.classList.add("hidden");
+            return;
+        }
+
+        // Hide other answers
+        document.querySelectorAll(".chat.ai").forEach(ai => {
+            ai.classList.add("hidden");
+        });
+
+        // Simulate AI thinking delay
+        setTimeout(() => {
+            answerBox.classList.remove("hidden");
+        }, 800);
+    });
+});
+
