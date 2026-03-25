@@ -72,10 +72,14 @@
 <h1 class="section-title">Smart Dashboard</h1>
 
 <div class="card-grid">
+
+
+
 <div class="card">
 <i class="fas fa-calendar-alt"></i>
 <h3>Periode Aktif</h3>
 <p>April 2026</p>
+<small style="color:#00e676;">🟢 Aktif</small>
 </div>
 
 <div class="card">
@@ -87,8 +91,22 @@
 <div class="card">
 <i class="fas fa-chart-line"></i>
 <h3>Statistik</h3>
-<p>80% Berkas Lengkap</p>
+<p id="statistik">Loading...</p>
+<small style="color:#aaa;">
+*Data otomatis dari Google Sheet
+</small>
 </div>
+
+<div class="card">
+<i class="fas fa-users"></i>
+<h3>Status Satuan</h3>
+<div id="monitoring-data"></div>
+</div>
+
+</div>
+
+</div>
+
 </div>
 </div>
 </section>
@@ -99,9 +117,15 @@
 <h1 class="section-title">Jenis-Jenis Kenaikan Pangkat</h1>
 
 <div class="card-grid">
+
 <div class="card jenis-card">
 <h3>Kenaikan Pangkat Reguler</h3>
 <p>Diberikan kepada PNS yang memenuhi masa kerja dan persyaratan administrasi sesuai ketentuan yang berlaku.</p>
+</div>
+
+<div class="card jenis-card">
+<h3>Kenaikan Pangkat Pilihan</h3>
+<p>Diberikan berdasarkan jabatan, prestasi kerja, atau penyesuaian ijazah sesuai regulasi yang berlaku.</p>
 </div>
 
 <div class="card jenis-card">
@@ -110,14 +134,13 @@
 </div>
 
 <div class="card jenis-card">
-<h3>Kenaikan Pangkat Pilihan Jabatan</h3>
-<p>Diberikan kepada PNS yang menduduki jabatan tertentu sesuai regulasi yang berlaku.</p>
+<h3>Kenaikan Pangkat Khusus (Insidentil)</h3>
+<p>Diberikan dalam kondisi tertentu seperti KPLB, anumerta, dan pengabdian, serta tidak terikat periodisasi.</p>
 </div>
 
-<div class="card jenis-card">
-<h3>Kenaikan Pangkat Struktural</h3>
-<p>Diberikan kepada PNS yang menjabat dalam jabatan struktural sesuai eselon dan masa jabatan.</p>
 </div>
+
+
 </div>
 </div>
 </section>
@@ -128,11 +151,15 @@
 <h1 class="section-title">Alur Proses</h1>
 
 <div class="card-grid">
-<div class="card">1️⃣ Pengumpulan</div>
-<div class="card">2️⃣ Verifikasi</div>
-<div class="card">3️⃣ Pengusulan</div>
-<div class="card">4️⃣ Persetujuan</div>
-<div class="card">5️⃣ SK Terbit</div>
+<div class="card">1️⃣ Pengumpulan Berkas Usulan</div>
+
+<div class="card">2️⃣ Penelitian dan Verifikasi Berkas</div>
+
+<div class="card">3️⃣ Pengusulan Kenaikan Pangkat</div>
+
+<div class="card">4️⃣ Proses Persetujuan dan Penetapan</div>
+
+<div class="card">5️⃣ Penerbitan Surat Keputusan (SK)</div>
 </div>
 </div>
 </section>
@@ -140,16 +167,29 @@
 <!-- ================= CHECKLIST ================= -->
 <section id="checklist">
 <div class="container">
-<h1 class="section-title">Smart Checklist</h1>
+<h1 class="section-title">Smart Checklist Persyaratan</h1>
 
-<div class="check-box">
-<label><input type="checkbox"> SK Terakhir</label>
-<label><input type="checkbox"> PAK</label>
-<label><input type="checkbox"> DP3</label>
+<!-- <div class="card"> -->
+<div class="card-grid"></div>
+<label><input type="checkbox"> SK Pangkat Terakhir</label>
+<label><input type="checkbox"> SK Jabatan Terakhir</label>
+<label><input type="checkbox"> Penilaian Kinerja (SKP / DP3)</label>
+<label><input type="checkbox"> PAK (Jabatan Fungsional)</label>
+<label><input type="checkbox"> Ijazah Terakhir</label>
 <label><input type="checkbox"> Surat Pengantar</label>
-</div>
+<label><input type="checkbox"> Daftar Riwayat Hidup (DRH)</label>
 
-<p id="checkMessage"></p>
+<p id="statusText">❌ Checklist belum lengkap</p>
+
+<!-- BUTTON FORM -->
+<a href="https://forms.gle/xxxx" target="_blank">
+<button class="btn-primary">
+Kirim Usulan Kenaikan Pangkat
+</button>
+</a>
+
+<small>*Penginputan dilakukan oleh Tim Spers satuan</small>
+</div>
 </div>
 </section>
 

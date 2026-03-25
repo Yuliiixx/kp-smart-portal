@@ -277,3 +277,75 @@ document.querySelectorAll(".faq-trigger").forEach(item => {
     });
 });
 
+
+fetch("https://docs.google.com/spreadsheets/d/e/2PACX-1vTyocMTqM7AcXUHr14KFKWQwCyg7geN1qYHCQ89v5N8BJqLGUKqWJK8oJilxVwehe2aMVvm8mTOtwe5/pub?output=csv")
+.then(res => res.text())
+.then(data => {
+
+    const rows = data.split("\n").slice(1);
+
+    let total = rows.length;
+    let lengkap = 0;
+    let belum = 0;
+
+    let html = "";
+
+    rows.forEach(row => {
+        let col = row.split(",");
+        let satuan = col[0];
+        let status = col[1].trim();
+
+        if(status === "Lengkap") lengkap++;
+        if(status === "Belum") belum++;
+
+        let icon = "❌";
+        if(status === "Lengkap") icon = "✅";
+        if(status === "Proses") icon = "⏳";
+
+        html += `<p>${icon} ${satuan}</p>`;
+    });
+
+    // tampilkan daftar satuan
+    document.getElementById("monitoring-data").innerHTML = html;
+
+    // tampilkan statistik
+    let persen = Math.round((lengkap / total) * 100);
+    document.getElementById("statistik").innerHTML =
+        persen + "% Berkas Lengkap";
+
+});
+
+
+///smart ceklist
+const checkboxes = document.querySelectorAll('#checklist input');
+const statusText = document.getElementById('statusText');
+const formBtn = document.getElementById('formBtn');
+const qrImage = document.getElementById('qrImage');
+
+checkboxes.forEach(cb => {
+    cb.addEventListener('change', updateChecklist);
+});
+
+function updateChecklist(){
+    let total = checkboxes.length;
+    let checked = 0;
+
+    checkboxes.forEach(cb => {
+        if(cb.checked) checked++;
+    });
+
+    if(checked === total){
+        statusText.innerHTML = "✅ Semua berkas lengkap";
+        statusText.style.color = "#00e676";
+
+        formBtn.style.display = "block";
+        qrImage.style.display = "block";
+
+    } else {
+        statusText.innerHTML = "❌ Checklist belum lengkap";
+        statusText.style.color = "red";
+
+        formBtn.style.display = "none";
+        qrImage.style.display = "none";
+    }
+}
