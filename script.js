@@ -37,11 +37,11 @@ function initCountdown() {
         const days = Math.floor(distance / (1000 * 60 * 60 * 24));
         const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
 
-        countdown.innerHTML = `⏳ Sisa Waktu: ${days} Hari ${hours} Jam`;
+        // countdown.innerHTML = `⏳ Sisa Waktu: ${days} Hari ${hours} Jam`;
 
-        if (warning) {
-            warning.innerHTML = days <= 7 ? "⚠️ Deadline Hampir Tiba!" : "";
-        }
+        // if (warning) {
+        //     warning.innerHTML = days <= 7 ? "⚠️ Deadline Hampir Tiba!" : "";
+        // }
 
     }, 1000);
 }
