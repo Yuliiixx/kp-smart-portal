@@ -68,140 +68,309 @@
 
 <!-- ================= DASHBOARD ================= -->
 <section id="dashboard">
-<div class="container">
-<h1 class="section-title">Smart Dashboard</h1>
+  <div class="container">
 
-<div class="card-grid">
+    <h1 class="section-title" style="text-align:center;">Smart Dashboard</h1>
 
+    <div class="card-grid">
 
+      <!-- PERIODE -->
+      <div class="card">
+        <i class="fas fa-calendar-alt"></i>
+        <h3>Periode Aktif</h3>
+        <p id="periodeText">April 2026</p>
+        <small id="statusPeriode" style="color:#00e676;">🟢 Aktif</small>
+      </div>
 
-<div class="card">
-<i class="fas fa-calendar-alt"></i>
-<h3>Periode Aktif</h3>
-<p>April 2026</p>
-<small style="color:#00e676;">🟢 Aktif</small>
-</div>
+      <!-- PENGUMUMAN -->
+      <div class="card">
+        <i class="fas fa-bullhorn"></i>
+        <h3>Pengumuman</h3>
+        <p id="pengumumanText">
+          Lengkapi berkas sebelum 31 Maret 2026.
+        </p>
+      </div>
 
-<div class="card">
-<i class="fas fa-bullhorn"></i>
-<h3>Pengumuman</h3>
-<p>Lengkapi berkas sebelum 31 Maret 2026.</p>
-</div>
+      <!-- STATISTIK -->
+      <div class="card">
+        <i class="fas fa-chart-line"></i>
+        <h3>Statistik</h3>
+        <p id="statistik">Loading...</p>
+        <small style="color:#aaa;">
+          *Data otomatis dari Google Sheet
+        </small>
+      </div>
 
-<div class="card">
-<i class="fas fa-chart-line"></i>
-<h3>Statistik</h3>
-<p id="statistik">Loading...</p>
-<small style="color:#aaa;">
-*Data otomatis dari Google Sheet
-</small>
-</div>
+      <!-- STATUS SATUAN -->
+      <div class="card">
+        <i class="fas fa-users"></i>
+        <h3>Status Satuan</h3>
+        <div id="monitoring-data">Loading...</div>
+      </div>
 
-<div class="card">
-<i class="fas fa-users"></i>
-<h3>Status Satuan</h3>
-<div id="monitoring-data"></div>
-</div>
+    </div>
 
-</div>
-
-</div>
-
-</div>
-</div>
+  </div>
 </section>
+
+<!-- ✅ TARUH DI SINI -->
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    initMonitoringData();
+});
+</script>
 
 <!-- ================= JENIS KP ================= -->
 <section id="jenis-kp">
-<div class="container">
-<h1 class="section-title">Jenis-Jenis Kenaikan Pangkat</h1>
+  <div class="container">
+    <h1 class="section-title">Jenis-Jenis Kenaikan Pangkat</h1>
 
-<div class="card-grid">
+    <div class="card-grid">
 
-<div class="card jenis-card">
-<h3>Kenaikan Pangkat Reguler</h3>
-<p>Diberikan kepada PNS yang memenuhi masa kerja dan persyaratan administrasi sesuai ketentuan yang berlaku.</p>
-</div>
+      <!-- REGULER -->
+      <div class="card jenis-card">
+        <h3>Kenaikan Pangkat Reguler</h3>
+        <p>Diberikan kepada PNS yang memenuhi masa kerja dan administrasi.</p>
 
-<div class="card jenis-card">
-<h3>Kenaikan Pangkat Pilihan</h3>
-<p>Diberikan berdasarkan jabatan, prestasi kerja, atau penyesuaian ijazah sesuai regulasi yang berlaku.</p>
-</div>
+        <button class="btn-detail">Lihat Detail</button>
 
-<div class="card jenis-card">
-<h3>Kenaikan Pangkat Fungsional</h3>
-<p>Diberikan berdasarkan angka kredit jabatan fungsional sesuai bidang keahlian masing-masing.</p>
-</div>
+        <div class="detail">
+          <ul>
+            <li>Masa kerja minimal terpenuhi (±4 tahun)</li>
+            <li>Penilaian kinerja minimal baik</li>
+            <li>Tidak sedang menjalani hukuman disiplin</li>
+          </ul>
+        </div>
+      </div>
 
-<div class="card jenis-card">
-<h3>Kenaikan Pangkat Khusus (Insidentil)</h3>
-<p>Diberikan dalam kondisi tertentu seperti KPLB, anumerta, dan pengabdian, serta tidak terikat periodisasi.</p>
-</div>
+      <!-- PILIHAN -->
+      <div class="card jenis-card">
+        <h3>Kenaikan Pangkat Pilihan</h3>
+        <p>Berdasarkan jabatan, fungsional, struktural, dan penyesuaian ijazah.</p>
 
-</div>
+        <button class="btn-detail">Lihat Detail</button>
 
+        <div class="detail">
+          <ul>
+            <li>Kenaikan karena jabatan</li>
+            <li>Prestasi kerja</li>
+            <li>Penyesuaian ijazah</li>
+          </ul>
+        </div>
+      </div>
 
-</div>
-</div>
+      <!-- ANUMERTA -->
+      <div class="card jenis-card">
+        <h3>Kenaikan Pangkat Anumerta</h3>
+        <p>Diberikan sebagai penghargaan kepada PNS yang wafat.</p>
+
+        <button class="btn-detail">Lihat Detail</button>
+
+        <div class="detail">
+          <ul>
+            <li>Diberikan setelah wafat</li>
+            <li>Sebagai penghormatan negara</li>
+            <li>Berdampak pada hak keluarga</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- PENGABDIAN -->
+      <div class="card jenis-card">
+        <h3>Kenaikan Pangkat Pengabdian</h3>
+        <p>Diberikan menjelang masa pensiun sebagai penghargaan.</p>
+
+        <button class="btn-detail">Lihat Detail</button>
+
+        <div class="detail">
+          <ul>
+            <li>Menjelang pensiun</li>
+            <li>Masa kerja panjang</li>
+            <li>Tanpa pelanggaran berat</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
 </section>
+
+
 
 <!-- ================= ALUR ================= -->
 <section id="alur">
-<div class="container">
-<h1 class="section-title">Alur Proses</h1>
+  <div class="container">
+    <h1 class="section-title">Alur Proses</h1>
 
-<div class="card-grid">
-<div class="card">1️⃣ Pengumpulan Berkas Usulan</div>
+    <div class="card-grid">
 
-<div class="card">2️⃣ Penelitian dan Verifikasi Berkas</div>
+      <div class="card">
+        <strong>1️⃣ Pengumpulan Usul & Hanmin</strong>
+        <p>(Bahan administrasi dari satuan kerja)</p>
+      </div>
 
-<div class="card">3️⃣ Pengusulan Kenaikan Pangkat</div>
+      <div class="card">
+        <strong>2️⃣ Penelitian dan Verifikasi Berkas</strong>
+        <p>Pemeriksaan kelengkapan dan keabsahan dokumen</p>
+      </div>
 
-<div class="card">4️⃣ Proses Persetujuan dan Penetapan</div>
+      <div class="card">
+        <strong>3️⃣ Pelaksanaan Sidang</strong>
+        <p>Penilaian usulan kenaikan pangkat</p>
+      </div>
 
-<div class="card">5️⃣ Penerbitan Surat Keputusan (SK)</div>
-</div>
-</div>
+      <div class="card">
+        <strong>4️⃣ Pengusulan ke Ditajenad / BKN</strong>
+        <p>Pengajuan berkas untuk proses lanjutan</p>
+      </div>
+
+      <div class="card">
+        <strong>5️⃣ Persetujuan BKN (Pertek)</strong>
+        <p>Pertimbangan teknis dari Badan Kepegawaian Negara</p>
+      </div>
+
+      <div class="card">
+        <strong>6️⃣ Penerbitan Keputusan (SK)</strong>
+        <p>Penetapan resmi kenaikan pangkat</p>
+      </div>
+
+      <div class="card">
+        <strong>7️⃣ Distribusi SK ke Satuan</strong>
+        <p>SK disampaikan ke satuan pengusul</p>
+      </div>
+
+    </div>
+  </div>
 </section>
 
-<!-- ================= CHECKLIST ================= -->
+<!-- ================= SYARAT ADM ================= -->
 <section id="checklist">
-<div class="container">
-<h1 class="section-title">Smart Checklist Persyaratan</h1>
+  <div class="container">
+    <h1 class="section-title">Smart Checklist Persyaratan</h1>
 
-<!-- <div class="card"> -->
-<div class="card-grid"></div>
-<label><input type="checkbox"> SK Pangkat Terakhir</label>
-<label><input type="checkbox"> SK Jabatan Terakhir</label>
-<label><input type="checkbox"> Penilaian Kinerja (SKP / DP3)</label>
-<label><input type="checkbox"> PAK (Jabatan Fungsional)</label>
-<label><input type="checkbox"> Ijazah Terakhir</label>
-<label><input type="checkbox"> Surat Pengantar</label>
-<label><input type="checkbox"> Daftar Riwayat Hidup (DRH)</label>
+    <div class="kp-grid">
 
-<p id="statusText">❌ Checklist belum lengkap</p>
+      <!-- ================= REGULER ================= -->
+      <div class="kp-card">
+        <div class="kp-header">
+          <div>
+            <h3>📄 Kenaikan Pangkat Reguler</h3>
+            <p>Masa kerja & administrasi</p>
+          </div>
+          <span class="icon">＋</span>
+        </div>
 
-<!-- BUTTON FORM -->
+        <div class="kp-content">
+          <div class="progress-bar"><div class="progress"></div></div>
+
+          <div class="checklist">
+            <label><input type="checkbox"> Surat usul dari Kotama/Balakpus</label>
+            <label><input type="checkbox"> Fotokopi Karpeg</label>
+            <label><input type="checkbox"> Fotokopi Kep KP terakhir</label>
+            <label><input type="checkbox"> Fotokopi Kep CPNS & PNS</label>
+            <label><input type="checkbox"> Fotokopi Kep jabatan</label>
+            <label><input type="checkbox"> Fotokopi ijazah terakhir</label>
+            <label><input type="checkbox"> Fotokopi SKP / PPK 2 tahun terakhir</label>
+            <label><input type="checkbox"> Daftar Riwayat Hidup (DRH)</label>
+          </div>
+
+         
 <a href="https://docs.google.com/forms/d/e/1FAIpQLSehD93vMCHygylKS5acu5RhOFyAnb-gi8LzoT0QaPpEehJ3bA/viewform?usp=publish-editor" target="_blank">
-<button class="btn-primary">
-Kirim Usulan Kenaikan Pangkat
-</button>
+  <button class="btn-submit" disabled>Kirim Usulan</button>
 </a>
 
-<small>*Penginputan dilakukan oleh Tim Spers satuan</small>
+<div class="catatan">
+  <p>📌 <strong>Catatan:</strong></p>
+  <ul>
+    <li>Penginputan dilakukan oleh <strong>Spers satuan</strong></li>
+    <li>Berkas <strong>hardcopy</strong> dikirim langsung ke <strong>Ajendam</strong></li>
+  </ul>
 </div>
-</div>
+        </div>
+      </div>
+
+      <!-- ================= PILIHAN FUNGSIONAL ================= -->
+      <div class="kp-card">
+        <div class="kp-header">
+          <div>
+            <h3>⭐ KP Pilihan (Fungsional)</h3>
+            <p>Berdasarkan angka kredit jabatan</p>
+          </div>
+          <span class="icon">＋</span>
+        </div>
+
+        <div class="kp-content">
+          <div class="progress-bar"><div class="progress"></div></div>
+
+          <div class="checklist">
+            <label><input type="checkbox"> Surat usul dari Kotama/Balakpus</label>
+            <label><input type="checkbox"> Fotokopi Karpeg</label>
+            <label><input type="checkbox"> Fotokopi Kep CPNS & PNS</label>
+            <label><input type="checkbox"> Fotokopi Kep KP terakhir</label>
+            <label><input type="checkbox"> Fotokopi Kep jabatan definitif</label>
+            <label><input type="checkbox"> Fotokopi ijazah terakhir</label>
+            <label><input type="checkbox"> PPK 2 tahun terakhir</label>
+            <label><input type="checkbox"> DSP</label>
+            <label><input type="checkbox"> Penetapan Angka Kredit (PAK)</label>
+            <label><input type="checkbox"> DPP Gaji terakhir</label>
+            <label><input type="checkbox"> Nilai Kesegaran Jasmani (IV/a ke atas)</label>
+          </div>
+
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSehD93vMCHygylKS5acu5RhOFyAnb-gi8LzoT0QaPpEehJ3bA/viewform?usp=publish-editor" target="_blank">
+            <button class="btn-submit">Kirim Usulan</button>
+          </a>
+        </div>
+      </div>
+
+      <!-- ================= PILIHAN STRUKTURAL ================= -->
+      <div class="kp-card">
+        <div class="kp-header">
+          <div>
+            <h3>🏢 KP Pilihan (Struktural)</h3>
+            <p>1 tingkat di bawah jenjang jabatan</p>
+          </div>
+          <span class="icon">＋</span>
+        </div>
+
+        <div class="kp-content">
+          <div class="progress-bar"><div class="progress"></div></div>
+
+          <div class="checklist">
+            <label><input type="checkbox"> Surat usul dari Kotama/Balakpus</label>
+            <label><input type="checkbox"> Fotokopi Karpeg</label>
+            <label><input type="checkbox"> Fotokopi Kep CPNS & PNS</label>
+            <label><input type="checkbox"> Fotokopi Kep KP terakhir</label>
+            <label><input type="checkbox"> Fotokopi Kep jabatan definitif</label>
+            <label><input type="checkbox"> Fotokopi ijazah terakhir</label>
+            <label><input type="checkbox"> PPK 2 tahun terakhir</label>
+            <label><input type="checkbox"> DSP</label>
+            <label><input type="checkbox"> DPP Gaji terakhir</label>
+          </div>
+
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSehD93vMCHygylKS5acu5RhOFyAnb-gi8LzoT0QaPpEehJ3bA/viewform?usp=publish-editor" target="_blank">
+            <button class="btn-submit">Kirim Usulan</button>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
 </section>
 
 <!-- ================= SMART KP CHECKER ================= -->
 <section id="cek-kp">
-<div class="container">
-<h1 class="section-title">Waktunya Kamu Naik Pangkat</h1>
-<h1 class="section-title">Smart KP Analyzer</h1>
-<p class="section-sub">
-Sistem analisis otomatis untuk memprediksi waktu kenaikan pangkat Anda
-berdasarkan data kepegawaian.
-</p>
+  <div class="container" align="center">
+
+    <h1 class="section-title">Waktunya Kamu Naik Pangkat</h1>
+    <h1 class="section-title">Smart KP Analyzer</h1>
+
+    <p class="section-sub">
+      Sistem analisis otomatis untuk memprediksi waktu kenaikan pangkat Anda
+      berdasarkan data kepegawaian.
+    </p>
+
+  </div>
+
 
 <div class="cek-card">
 
@@ -238,7 +407,12 @@ berdasarkan data kepegawaian.
             </select>
         </div>
     </div>
-
+<div class="input-group">
+  <div class="input-icon">
+    <i class="fas fa-calendar"></i>
+    <input type="number" id="tmtSebelumnya" placeholder="Masukkan Tahun TMT Terakhir (contoh: 2021)">
+  </div>
+</div>
 
     <button class="btn-elegant" onclick="cekKP()">
         <i class="fas fa-chart-line"></i> Analisis Sekarang
@@ -306,11 +480,184 @@ berdasarkan data kepegawaian.
         </div>
     </div>
 
+
+    <!-- ================= FAQ TAMBAHAN ================= -->
+
+<!-- 4 -->
+<div class="chat user faq-trigger" data-answer="jawab4">
+    <div class="avatar">👤</div>
+    <div class="bubble">Apa perbedaan kenaikan pangkat reguler dan pilihan?</div>
+</div>
+<div class="chat ai hidden" id="jawab4">
+    <div class="avatar glow">🤖</div>
+    <div class="bubble typing">
+        Kenaikan pangkat reguler berdasarkan masa kerja (4 tahun),
+        sedangkan kenaikan pangkat pilihan berdasarkan jabatan,
+        prestasi, atau penyesuaian ijazah.
+    </div>
+</div>
+
+<!-- 5 -->
+<div class="chat user faq-trigger" data-answer="jawab5">
+    <div class="avatar">👤</div>
+    <div class="bubble">Apa itu TMT dalam kenaikan pangkat?</div>
+</div>
+<div class="chat ai hidden" id="jawab5">
+    <div class="avatar glow">🤖</div>
+    <div class="bubble typing">
+        TMT (Terhitung Mulai Tanggal) adalah tanggal atau tahun mulai berlaku
+        pangkat terakhir yang digunakan sebagai dasar perhitungan kenaikan berikutnya.
+    </div>
+</div>
+
+<!-- 6 -->
+<div class="chat user faq-trigger" data-answer="jawab6">
+    <div class="avatar">👤</div>
+    <div class="bubble">Apakah bisa naik pangkat sebelum 4 tahun?</div>
+</div>
+<div class="chat ai hidden" id="jawab6">
+    <div class="avatar glow">🤖</div>
+    <div class="bubble typing">
+        Bisa. Hal ini berlaku untuk kenaikan pangkat pilihan,
+        seperti karena ijazah, jabatan, atau prestasi tertentu.
+    </div>
+</div>
+
+<!-- 7 -->
+<div class="chat user faq-trigger" data-answer="jawab7">
+    <div class="avatar">👤</div>
+    <div class="bubble">Apa saja dokumen wajib untuk usulan?</div>
+</div>
+<div class="chat ai hidden" id="jawab7">
+    <div class="avatar glow">🤖</div>
+    <div class="bubble typing">
+        Dokumen utama meliputi: SK terakhir, Karpeg, SKP/PPK,
+        ijazah, surat usul, dan dokumen pendukung sesuai jenis kenaikan pangkat.
+    </div>
+</div>
+
+<!-- 8 -->
+<div class="chat user faq-trigger" data-answer="jawab8">
+    <div class="avatar">👤</div>
+    <div class="bubble">Siapa yang menginput usulan kenaikan pangkat?</div>
+</div>
+<div class="chat ai hidden" id="jawab8">
+    <div class="avatar glow">🤖</div>
+    <div class="bubble typing">
+        Penginputan dilakukan oleh Tim Spers di satuan masing-masing,
+        bukan oleh individu PNS secara langsung.
+    </div>
+</div>
+
+<!-- 9 -->
+<div class="chat user faq-trigger" data-answer="jawab9">
+    <div class="avatar">👤</div>
+    <div class="bubble">Kemana berkas hardcopy dikirim?</div>
+</div>
+<div class="chat ai hidden" id="jawab9">
+    <div class="avatar glow">🤖</div>
+    <div class="bubble typing">
+        Berkas hardcopy dikirim langsung ke Ajendam sesuai prosedur yang berlaku.
+    </div>
+</div>
+
+<!-- 10 -->
+<div class="chat user faq-trigger" data-answer="jawab10">
+    <div class="avatar">👤</div>
+    <div class="bubble">Apa yang terjadi jika berkas tidak lengkap?</div>
+</div>
+<div class="chat ai hidden" id="jawab10">
+    <div class="avatar glow">🤖</div>
+    <div class="bubble typing">
+        Berkas akan dikembalikan untuk dilengkapi, sehingga dapat menyebabkan
+        keterlambatan proses kenaikan pangkat.
+    </div>
+</div>
+
+<!-- 11 -->
+<div class="chat user faq-trigger" data-answer="jawab11">
+    <div class="avatar">👤</div>
+    <div class="bubble">Apakah SKP wajib untuk kenaikan pangkat?</div>
+</div>
+<div class="chat ai hidden" id="jawab11">
+    <div class="avatar glow">🤖</div>
+    <div class="bubble typing">
+        Ya, SKP atau PPK 2 tahun terakhir wajib sebagai dasar penilaian kinerja.
+    </div>
+</div>
+
+<!-- 12 -->
+<div class="chat user faq-trigger" data-answer="jawab12">
+    <div class="avatar">👤</div>
+    <div class="bubble">Bagaimana cara mengetahui saya sudah layak naik pangkat?</div>
+</div>
+<div class="chat ai hidden" id="jawab12">
+    <div class="avatar glow">🤖</div>
+    <div class="bubble typing">
+        Anda dapat menggunakan fitur Smart KP Analyzer untuk melihat estimasi
+        dan kelayakan kenaikan pangkat berdasarkan data Anda.
+    </div>
+</div>
+
 </div>
 </div>
 </section>
 
+<!-- ================= DASAR USUL KP (MODERN UI) ================= -->
+<section id="dasar-kp">
+  <div class="container" style="max-width:800px; margin:auto;">
 
+    <h2 class="section-title" style="text-align:center;">
+      📑 Dasar Usul Kenaikan Pangkat
+    </h2>
+
+    <div class="dasar-card">
+
+      <!-- HEADER -->
+      <div class="dasar-header" onclick="toggleDasar()">
+        <h3>📌 Lihat Dasar Regulasi</h3>
+        <span id="iconDasar">+</span>
+      </div>
+
+      <!-- CONTENT -->
+      <div class="dasar-content" id="dasarContent">
+
+        <p><strong>Dasar:</strong></p>
+
+        <ol type="a">
+
+          <li>
+            Surat Telegram Kasad Nomor ST/560/2002 tanggal 13 Juni 2002 tentang Ketentuan usul Kenaikan Pangkat.
+            <br>
+            <a href="#" target="_blank" class="btn-doc">📄 Lihat Dokumen</a>
+          </li>
+
+          <li>
+            Surat Edaran Dirajenad Nomor SE/01/IV/2003 tanggal 22 April 2003 tentang Ketentuan usul Kenaikan Pangkat PNS AD.
+            <br>
+            <a href="#" target="_blank" class="btn-doc">📄 Lihat Dokumen</a>
+          </li>
+
+          <li>
+            Keputusan KASAD No KEP/586/VIII/2017 tanggal 8 Agustus 2017 tentang juknis pengelenggaraan administrasi kepangkatan & jabatan PNS AD.
+            <br>
+            <a href="#" target="_blank" class="btn-doc">📄 Lihat Dokumen</a>
+          </li>
+
+          <li>
+            Surat Edaran Kasad Nomor SE/19/X/2025 tanggal 24 Oktober 2025 tentang Perubahan Periodisasi Kenaikan Pangkat PNS TNI AD.
+            <br>
+            <a href="https://drive.google.com/file/d/1kSv-2bYnEmZnKvke4K1jxWchRqYYlT3S/view?usp=drive_link" target="_blank" class="btn-doc">📄 Lihat Dokumen</a>
+          </li>
+
+        </ol>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
 
 
 <!-- =================  KONTAK ================= -->

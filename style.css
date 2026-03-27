@@ -547,3 +547,259 @@ font-weight:bold;
 #formBtn button{
 margin-top:15px;
 }
+
+/* detail jenis kp */
+.detail {
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+}
+
+.detail.show {
+  max-height: 200px;
+}
+
+.btn-detail {
+  margin-top: 10px;
+  padding: 8px 14px;
+  border: none;
+  border-radius: 6px;
+  background: #ffd600;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.btn-detail:hover {
+  background: #ffea00;
+}
+
+.kp-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 20px;
+}
+
+.kp-card {
+  background: rgba(255,255,255,0.03);
+  backdrop-filter: blur(12px);
+  border-radius: 18px;
+  padding: 18px;
+  border: 1px solid rgba(255,255,255,0.08);
+  transition: 0.3s;
+}
+
+.kp-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,255,150,0.15);
+}
+
+.kp-header {
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.icon {
+  font-size: 22px;
+  color: #00e676;
+  transition: 0.3s;
+}
+
+.kp-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: 0.4s ease;
+}
+
+.kp-card.active .kp-content {
+  max-height: 500px;
+  margin-top: 15px;
+}
+
+.kp-card.active .icon {
+  transform: rotate(45deg);
+}
+
+.checklist label {
+  display: block;
+  margin: 8px 0;
+}
+
+.progress-bar {
+  height: 6px;
+  background: #222;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.progress {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg,#00e676,#00c853);
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.btn-submit {
+  width: 100%;
+  margin-top: 15px;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  background: linear-gradient(45deg,#00e676,#00c853);
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.kp-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 20px;
+}
+
+.kp-card {
+  background: #111;
+  border-radius: 15px;
+  padding: 15px;
+  transition: 0.3s;
+}
+
+.kp-header {
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.icon {
+  color: #00e676;
+}
+
+.kp-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: 0.4s;
+}
+
+.kp-card.active .kp-content {
+  max-height: 600px;
+  margin-top: 10px;
+}
+
+.checklist label {
+  display: block;
+  margin: 6px 0;
+}
+
+.progress-bar {
+  height: 6px;
+  background: #333;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.progress {
+  height: 100%;
+  width: 0%;
+  background: #00e676;
+  border-radius: 10px;
+}
+
+.status-text {
+  text-align: center;
+  font-weight: bold;
+}
+
+.btn-submit {
+  width: 100%;
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  background: #00c853;
+  color: white;
+}
+
+.btn-submit:disabled {
+  background: #555;
+  cursor: not-allowed;
+}
+
+.catatan {
+  margin-top: 10px;
+  font-size: 13px;
+}
+
+.chat.user {
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.chat.user:hover {
+  transform: translateX(5px);
+  box-shadow: 0 0 15px rgba(0,255,150,0.3);
+}
+
+.chat.user.active {
+  background: linear-gradient(45deg,#00e676,#00c853);
+}
+
+.chat.user {
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.chat.user:hover {
+  transform: translateX(5px);
+  box-shadow: 0 0 15px rgba(0,255,150,0.3);
+}
+
+.chat.user.active {
+  background: linear-gradient(45deg,#00e676,#00c853);
+}
+
+
+
+/* dasarkp */
+
+
+.dasar-card {
+  background: #111827;
+  border-radius: 15px;
+  padding: 15px;
+  margin-top: 20px;
+}
+
+.dasar-header {
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.dasar-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: 0.4s ease;
+  margin-top: 10px;
+}
+
+.dasar-content.show {
+  max-height: 500px;
+}
+
+.btn-doc {
+  display: inline-block;
+  margin-top: 5px;
+  padding: 5px 10px;
+  background: #00e676;
+  color: black;
+  border-radius: 6px;
+  font-size: 12px;
+  text-decoration: none;
+}
+
+.btn-doc:hover {
+  background: #00c853;
+}
