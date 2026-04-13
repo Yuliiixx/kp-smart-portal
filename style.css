@@ -63,6 +63,13 @@ nav ul li a:hover::after{width:100%;}
 min-height:100vh;
 display:flex;
 align-items:center;
+margin-bottom: 0;
+    padding-bottom: 0;
+
+}
+#home {
+    padding: 60px 0 20px 0; /* kecilkan bawah */
+    min-height: auto; /* HAPUS full screen */
 }
 
 .hero-content{
@@ -802,4 +809,109 @@ margin-top:15px;
 
 .btn-doc:hover {
   background: #00c853;
+}
+
+/* PERIODE BOX */
+/* WRAPPER ATAS */
+.hero-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+/* BAGIAN KIRI */
+.hero-left h1 {
+    font-size: 40px;
+}
+
+.hero-left span {
+    color: #00e676;
+}
+
+/* 🔥 BOX KECIL */
+.periode-box {
+    background: #111;
+    padding: 10px 14px;
+    border-radius: 8px;
+    border-left: 3px solid #00e676;
+    font-size: 12px;
+    line-height: 1.5;
+    max-width: 160px;
+}
+
+.periode-box strong {
+    color: #00e676;
+    font-size: 13px;
+}
+
+.periode-box small {
+    color: #aaa;
+}
+
+/* DESKRIPSI */
+.hero-desc {
+    margin-top: 20px;
+    color: #aaa;
+    max-width: 600px;
+}
+
+/* HERO WRAPPER */
+.hero-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    margin-top: 40px;
+    flex-wrap: wrap;
+}
+
+/* TEXT KIRI */
+.hero-text {
+    max-width: 600px;
+}
+
+/* 🔥 BOX KANAN */
+.hero-box {
+    background: #111;
+    padding: 25px 35px;
+    border-radius: 15px;
+    text-align: center;
+    min-width: 300px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
+
+/* JUDUL */
+.hero-box h3 {
+    margin-bottom: 10px;
+}
+
+/* STATUS */
+.status-open {
+    color: #00e676;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+/* GARIS */
+.hero-box hr {
+    border: none;
+    height: 1px;
+    background: #444;
+    margin: 10px 0;
+}
+
+/* TEXT */
+.hero-box p {
+    color: #aaa;
+    margin: 5px 0;
+}
+
+.hero-box strong {
+    color: #fff;
+}
+
+.hero-box {
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(10px);
 }
