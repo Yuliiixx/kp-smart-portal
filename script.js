@@ -513,3 +513,82 @@ function toggleDasar() {
     icon.innerText = "+";
   }
 }
+
+//galeri
+document.addEventListener("DOMContentLoaded", function () {
+
+  const track = document.getElementById("slideTrack");
+  const images = document.querySelectorAll("#slideTrack img");
+  const nextBtn = document.querySelector(".next");
+  const prevBtn = document.querySelector(".prev");
+  const slider = document.querySelector(".slider");
+
+  let position = 0;
+  const imgWidth = 240;
+  let autoSlide;
+
+  // ================= AUTO =================
+  function startAutoSlide() {
+    autoSlide = setInterval(moveNext, 3000);
+  }
+
+  function stopAutoSlide() {
+    clearInterval(autoSlide);
+  }
+
+  // ================= GERAK =================
+  function moveNext() {
+    const maxScroll = -(imgWidth * (images.length - 4));
+
+    if (position > maxScroll) {
+      position -= imgWidth;
+    } else {
+      position = 0;
+    }
+
+    track.style.transform = `translateX(${position}px)`;
+  }
+
+  function movePrev() {
+    const maxScroll = -(imgWidth * (images.length - 4));
+
+    if (position < 0) {
+      position += imgWidth;
+    } else {
+      position = maxScroll;
+    }
+
+    track.style.transform = `translateX(${position}px)`;
+  }
+
+  // ================= BUTTON =================
+  nextBtn.addEventListener("click", () => {
+    stopAutoSlide();
+    moveNext();
+    startAutoSlide();
+  });
+
+  prevBtn.addEventListener("click", () => {
+    stopAutoSlide();
+    movePrev();
+    startAutoSlide();
+  });
+
+  // ================= HOVER =================
+  slider.addEventListener("mouseenter", stopAutoSlide);
+  slider.addEventListener("mouseleave", startAutoSlide);
+
+  // ================= START =================
+  startAutoSlide();
+
+});
+
+// ================= MODAL =================
+function openModal(src) {
+  document.getElementById("modal").style.display = "flex";
+  document.getElementById("modalImg").src = src;
+}
+
+function closeModal() {
+  document.getElementById("modal").style.display = "none";
+}

@@ -686,55 +686,49 @@ document.addEventListener("DOMContentLoaded", function() {
 </div>
 </div>
 </section>
-<!-- ================= GALERI ================= -->
 <section id="galeri">
   <div class="container">
 
     <h1 class="section-title">Galeri</h1>
 
     <div class="slider">
-      <div class="slide-track">
 
-        <!-- DUPLIKASI GAMBAR BIAR LOOP HALUS -->
-        <img src="images/galeri/1.jpeg">
-        <img src="images/galeri/2.jpeg">
-        <img src="images/galeri/3.jpeg">
-        <img src="images/galeri/4.jpeg">
-        <img src="images/galeri/5.jpeg">
-        <img src="images/galeri/6.jpeg">
-        <img src="images/galeri/7.jpeg">
-        <img src="images/galeri/8.jpeg">
-        <img src="images/galeri/9.jpg">
-        <img src="images/galeri/10.jpg">
-        <img src="images/galeri/11.jpeg">
-        <img src="images/galeri/12.jpeg">
-        <img src="images/galeri/13.jpeg">
-        <img src="images/galeri/14.jpg">
-        <img src="images/galeri/15.jpeg">
+      <!-- tombol kiri -->
+      <span class="nav prev">&#10094;</span>
 
-        <!-- ulang lagi -->
-        <img src="images/galeri/1.jpeg">
-        <img src="images/galeri/2.jpeg">
-        <img src="images/galeri/3.jpeg">
-        <img src="images/galeri/4.jpeg">
-        <img src="images/galeri/5.jpeg">
-        <img src="images/galeri/6.jpeg">
-        <img src="images/galeri/7.jpeg">
-        <img src="images/galeri/8.jpeg">
-        <img src="images/galeri/9.jpg">
-        <img src="images/galeri/10.jpg">
-        <img src="images/galeri/11.jpeg">
-        <img src="images/galeri/12.jpeg">
-        <img src="images/galeri/13.jpeg">
-        <img src="images/galeri/14.jpg">
-        <img src="images/galeri/15.jpeg">
-        
+      <div class="slide-track" id="slideTrack">
+
+        <!-- gambar -->
+        <img src="images/galeri/1.jpeg" onclick="openModal(this.src)">
+        <img src="images/galeri/2.jpeg" onclick="openModal(this.src)">
+        <img src="images/galeri/3.jpeg" onclick="openModal(this.src)">
+        <img src="images/galeri/4.jpeg" onclick="openModal(this.src)">
+        <img src="images/galeri/5.jpeg" onclick="openModal(this.src)">
+        <img src="images/galeri/6.jpeg" onclick="openModal(this.src)">
+        <img src="images/galeri/7.jpeg" onclick="openModal(this.src)">
+        <img src="images/galeri/8.jpeg" onclick="openModal(this.src)">
+        <img src="images/galeri/9.jpeg" onclick="openModal(this.src)">
+        <img src="images/galeri/10.jpg" onclick="openModal(this.src)">
+        <img src="images/galeri/11.jpg" onclick="openModal(this.src)">
+        <img src="images/galeri/12.jpg" onclick="openModal(this.src)">
+        <img src="images/galeri/13.jpeg" onclick="openModal(this.src)">
+        <img src="images/galeri/14.jpeg" onclick="openModal(this.src)">
+        <img src="images/galeri/15.jpeg" onclick="openModal(this.src)">
 
       </div>
+
+      <!-- tombol kanan -->
+      <span class="nav next">&#10095;</span>
+
     </div>
 
   </div>
 </section>
+
+<!-- MODAL -->
+<div id="modal" class="modal" onclick="closeModal()">
+  <img id="modalImg">
+</div>
 
 <footer>
 © 2026 KP Smart Portal
