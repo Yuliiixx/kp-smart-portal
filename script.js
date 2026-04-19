@@ -529,7 +529,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // ================= AUTO =================
   function startAutoSlide() {
-    autoSlide = setInterval(moveNext, 3000);
+    autoSlide = setInterval(moveNext, 4000);
   }
 
   function stopAutoSlide() {
@@ -564,13 +564,27 @@ document.addEventListener("DOMContentLoaded", function () {
   // ================= BUTTON =================
   nextBtn.addEventListener("click", () => {
     stopAutoSlide();
+
+    track.classList.add("fast");
     moveNext();
+
+    setTimeout(() => {
+      track.classList.remove("fast");
+    }, 150);
+
     startAutoSlide();
   });
 
   prevBtn.addEventListener("click", () => {
     stopAutoSlide();
+
+    track.classList.add("fast");
     movePrev();
+
+    setTimeout(() => {
+      track.classList.remove("fast");
+    }, 150);
+
     startAutoSlide();
   });
 
@@ -578,7 +592,6 @@ document.addEventListener("DOMContentLoaded", function () {
   slider.addEventListener("mouseenter", stopAutoSlide);
   slider.addEventListener("mouseleave", startAutoSlide);
 
-  // ================= START =================
   startAutoSlide();
 
 });

@@ -89,22 +89,7 @@
 
     <div class="card-grid">
 
-      <!-- PERIODE -->
-      <!-- <div class="card">
-        <i class="fas fa-calendar-alt"></i>
-        <h3>Periode Aktif</h3>
-        <p id="periodeText">April 2026</p>
-        <small id="statusPeriode" style="color:#00e676;">🟢 Aktif</small>
-      </div> -->
-
-      <!-- PENGUMUMAN -->
-      <!-- <div class="card">
-        <i class="fas fa-bullhorn"></i>
-        <h3>Pengumuman</h3>
-        <p id="pengumumanText">
-          Lengkapi berkas sebelum 31 Maret 2026.
-        </p>
-      </div> -->
+     
 
       <!-- STATISTIK -->
       <div class="card">
@@ -145,11 +130,11 @@ document.addEventListener("DOMContentLoaded", function() {
       <!-- REGULER -->
        
       <div class="work">
-        <img src="images/a.jpg">
+        <img src="images/reguler.png">
 
         <div class="layer">
           <h3>Kenaikan Pangkat Reguler</h3>
-          <p>PNS yang memenuhi masa kerja & administrasi.</p>
+          <p>Diberikan kepada PNS yang memenuhi masa kerja dan syarat administrasi.</p>
  
           <a href="reguler.html">
             <i class="fas fa-external-link-alt"></i>
@@ -159,11 +144,11 @@ document.addEventListener("DOMContentLoaded", function() {
 
       <!-- PILIHAN -->
       <div class="work">
-        <img src="images/pilihan.jpg">
+        <img src="images/pilihan.png">
 
         <div class="layer">
           <h3>Kenaikan Pangkat Pilihan</h3>
-          <p>Berdasarkan jabatan & penyesuaian ijazah.</p>
+          <p>Berdasarkan jabatan struktural, fungsional, dan penyesuaian ijazah.</p>
 
           <a href="pilihan.html">
             <i class="fas fa-external-link-alt"></i>
@@ -171,29 +156,34 @@ document.addEventListener("DOMContentLoaded", function() {
         </div>
       </div>
 
+    
       <!-- ANUMERTA -->
-      <div class="work">
-        <img src="images/anumerta.jpg">
+<div class="work">
+  <img src="images/anumerta.png" alt="Kenaikan Pangkat Anumerta">
 
-        <div class="layer">
-          <h3>Kenaikan Pangkat Anumerta</h3>
-          <p>Penghargaan bagi PNS yang wafat saat tugas.</p>
+  <div class="layer">
+    <h3>Kenaikan Pangkat Anumerta</h3>
+    
+    <p>
+      Kenaikan pangkat sebagai penghargaan negara kepada PNS yang wafat 
+      dalam menjalankan tugas atau pengabdian.
+    </p>
 
-          <a href="#" class="detail-btn">
-            <i class="fas fa-external-link-alt"></i>
-          </a>
-        </div>
-      </div>
+    <a href="anumerta.html">
+      <i class="fas fa-external-link-alt"></i>
+    </a>
+  </div>
+</div>
 
       <!-- PENGABDIAN -->
       <div class="work">
-        <img src="images/pengabdian.jpg">
+        <img src="images/pengabdian.png">
 
         <div class="layer">
           <h3>Kenaikan Pangkat Pengabdian</h3>
-          <p>Diberikan menjelang masa pensiun.</p>
+          <p>Diberikan menjelang masa pensiun sebagai penghargaan.</p>
 
-          <a href="#" class="detail-btn">
+          <a href="pengabdian.html">
             <i class="fas fa-external-link-alt"></i>
           </a>
         </div>
@@ -209,40 +199,47 @@ document.addEventListener("DOMContentLoaded", function() {
   <div class="container">
     <h1 class="section-title">Alur Proses</h1>
 
-    <div class="card-grid">
+    <div class="timeline">
 
       <div class="card">
-        <strong>1️⃣ Pengumpulan Usul & Hanmin</strong>
+        <span class="step">1</span>
+        <strong>Pengumpulan Usul & Hanmin</strong>
         <p>(Bahan administrasi dari satuan kerja)</p>
       </div>
 
       <div class="card">
-        <strong>2️⃣ Penelitian dan Verifikasi Berkas</strong>
+        <span class="step">2</span>
+        <strong>Penelitian dan Verifikasi Berkas</strong>
         <p>Pemeriksaan kelengkapan dan keabsahan dokumen</p>
       </div>
 
       <div class="card">
-        <strong>3️⃣ Pelaksanaan Sidang</strong>
+        <span class="step">3</span>
+        <strong>Pelaksanaan Sidang</strong>
         <p>Penilaian usulan kenaikan pangkat</p>
       </div>
 
       <div class="card">
-        <strong>4️⃣ Pengusulan ke Ditajenad / BKN</strong>
+        <span class="step">4</span>
+        <strong>Pengusulan ke Ditajenad / BKN</strong>
         <p>Pengajuan berkas untuk proses lanjutan</p>
       </div>
 
       <div class="card">
-        <strong>5️⃣ Persetujuan BKN (Pertek)</strong>
+        <span class="step">5</span>
+        <strong>Persetujuan BKN (Pertek)</strong>
         <p>Pertimbangan teknis dari Badan Kepegawaian Negara</p>
       </div>
 
       <div class="card">
-        <strong>6️⃣ Penerbitan Keputusan (Kep)</strong>
+        <span class="step">6</span>
+        <strong>Penerbitan Keputusan (Kep)</strong>
         <p>Penetapan resmi kenaikan pangkat</p>
       </div>
 
       <div class="card">
-        <strong>7️⃣ Distribusi Kep ke Satuan</strong>
+        <span class="step">7</span>
+        <strong>Distribusi Kep ke Satuan</strong>
         <p>Kep disampaikan ke satuan pengusul</p>
       </div>
 
@@ -686,6 +683,8 @@ document.addEventListener("DOMContentLoaded", function() {
 </div>
 </div>
 </section>
+
+<!-- GALERI -->
 <section id="galeri">
   <div class="container">
 
@@ -694,7 +693,7 @@ document.addEventListener("DOMContentLoaded", function() {
     <div class="slider">
 
       <!-- tombol kiri -->
-      <span class="nav prev">&#10094;</span>
+      <!-- <span class="nav prev">&#10094;</span> -->
 
       <div class="slide-track" id="slideTrack">
 
@@ -718,7 +717,7 @@ document.addEventListener("DOMContentLoaded", function() {
       </div>
 
       <!-- tombol kanan -->
-      <span class="nav next">&#10095;</span>
+      <!-- <span class="nav next">&#10095;</span> -->
 
     </div>
 

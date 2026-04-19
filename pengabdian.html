@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Kenaikan Pangkat Reguler</title>
+<title>Kenaikan Pangkat Pengabdian</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
@@ -31,7 +31,6 @@ body {
 }
 
 .header h1 {
-  font-size: 32px;
   color: #00e676;
 }
 
@@ -54,6 +53,7 @@ body {
   color: white;
   border-radius: 6px;
   cursor: pointer;
+  transition: 0.3s;
 }
 
 .tab-menu button.active,
@@ -66,8 +66,8 @@ body {
 .card {
   display: none;
   background: #1c1c1c;
-  border-radius: 10px;
-  padding: 20px;
+  padding: 25px;
+  border-radius: 12px;
 }
 
 .card.active {
@@ -108,85 +108,83 @@ li {
 
 <!-- HEADER -->
 <div class="header">
-  <h1>Kenaikan Pangkat Reguler</h1>
-  <p>Sesuai ketentuan administrasi PNS</p>
+  <h1>Kenaikan Pangkat Pengabdian</h1>
+  <p>Kenaikan pangkat sebagai penghargaan menjelang pensiun atau karena kondisi tertentu</p>
 </div>
 
-<!-- TAB -->
+<!-- MENU -->
 <div class="tab-menu">
-  <button class="tab-btn active" onclick="showTab(0)">Persyaratan</button>
+  <button class="tab-btn active" onclick="showTab(0)">Persyaratan Umum</button>
   <button class="tab-btn" onclick="showTab(1)">Administrasi</button>
   <button class="tab-btn" onclick="showTab(2)">Wewenang</button>
 </div>
 
-<!-- ================= PERSYARATAN ================= -->
+<!-- ================= UMUM ================= -->
 <div class="card active">
 <h2>Persyaratan Umum</h2>
 <ul>
-<li>Tidak menduduki jabatan struktural atau jabatan fungsional tertentu.</li>
-
-<li>Bagi PNS yang sedang tugas belajar, sebelumnya tidak menjabat jabatan tertentu.</li>
-
-<li>PNS yang diperbantukan di luar instansi tetap dapat dipertimbangkan, selama tidak menduduki jabatan pimpinan atau jabatan tertentu.</li>
-
-<li>Kenaikan pangkat tidak boleh melebihi pangkat atasan langsung.</li>
-
-<li><b>Pangkat maksimal berdasarkan pendidikan:</b>
+<li>Diberikan kepada PNS yang akan pensiun atau meninggal dunia.</li>
+<li>Dapat juga diberikan kepada PNS yang mengalami cacat karena tugas.</li>
+<li>Memiliki masa kerja minimal:
   <ul>
-    <li>SD → maksimal II/a</li>
-    <li>SMP → maksimal II/c</li>
-    <li>SLTP Kejuruan → maksimal II/d</li>
-    <li>SLTA/D1/D2 → maksimal III/b</li>
-    <li>D3 / Sarjana Muda → maksimal III/c</li>
-    <li>S1 / D4 → maksimal III/d</li>
-    <li>S2 / profesi → maksimal IV/a</li>
-    <li>S3 → maksimal IV/b</li>
+    <li>30 tahun (minimal 1 bulan di pangkat terakhir), atau</li>
+    <li>20 tahun (minimal 1 tahun di pangkat terakhir), atau</li>
+    <li>10 tahun (minimal 2 tahun di pangkat terakhir).</li>
   </ul>
 </li>
-
-<li>Masa Dinas Dalam Pangkat (MDDP) minimal 4 tahun.</li>
-
-<li>Nilai kinerja (PPK) minimal baik dalam 2 tahun terakhir.</li>
-
-<li>Lulus Ujian Dinas Tk. I untuk kenaikan ke III/a (kecuali sudah S1/D4).</li>
-
-<li>Lulus Diklat Teknis Alih Golongan.</li>
-
-<li>Lulus Ujian Dinas Tk. II untuk kenaikan ke IV/a (dengan ketentuan tertentu).</li>
-
-<li>Ijazah minimal terakreditasi B dengan IPK minimal 2,50.</li>
+<li>Nilai kinerja (PPK) minimal baik dalam 1 tahun terakhir.</li>
+<li>Tidak pernah dijatuhi hukuman disiplin sedang/berat dalam 1 tahun terakhir.</li>
+<li>Masa kerja dihitung sejak diangkat sebagai CPNS/PNS.</li>
+<li>Berlaku mulai tanggal meninggal dunia atau saat pensiun.</li>
+<li>Tidak terikat jabatan atau ujian dinas.</li>
 </ul>
 </div>
 
-<!-- ================= ADMINISTRASI ================= -->
+<!-- ================= ADMIN ================= -->
 <div class="card">
 <h2>Persyaratan Administrasi</h2>
+
+<h3>1. Karena Pensiun</h3>
 <ul>
 <li>Surat usul dari Kotama/Balakpus.</li>
 <li>Fotokopi Karpeg.</li>
-<li>Fotokopi SK pangkat terakhir.</li>
 <li>Fotokopi SK CPNS dan PNS.</li>
-<li>Fotokopi SK/Sprin jabatan.</li>
-<li>Fotokopi ijazah terakhir.</li>
-<li>Fotokopi surat lulus ujian dinas.</li>
-<li>Fotokopi surat tugas belajar (jika ada).</li>
-<li>Fotokopi surat penugasan luar instansi (jika ada).</li>
-<li>Daftar nilai kesegaran jasmani (khusus golongan IV/a ke atas).</li>
-<li>Fotokopi ijazah diklat dan sumpah/janji pegawai (untuk pangkat pertama).</li>
-<li>Fotokopi SKP.</li>
-<li>PPK dua tahun terakhir.</li>
+<li>Fotokopi SK pangkat terakhir.</li>
+<li>PPK 1 tahun terakhir.</li>
+<li>Surat pernyataan tidak pernah dijatuhi hukuman disiplin.</li>
 </ul>
+
+<h3>2. Karena Cacat Dinas</h3>
+<ul>
+<li>Surat usul dari Kotama/Balakpus.</li>
+<li>Fotokopi SK CPNS dan PNS.</li>
+<li>Fotokopi SK pangkat terakhir.</li>
+<li>Berita acara kejadian dari kepolisian.</li>
+<li>Surat tugas (Sprin) saat kejadian.</li>
+<li>Surat keterangan tim kesehatan.</li>
+<li>Laporan kejadian dari satuan.</li>
+<li>Fotokopi SK jabatan.</li>
+</ul>
+
+<h3>3. Karena Meninggal Dunia</h3>
+<ul>
+<li>Surat usul dari Kotama/Balakpus.</li>
+<li>Fotokopi SK CPNS dan PNS.</li>
+<li>Fotokopi SK pangkat terakhir.</li>
+<li>PPK 1 tahun terakhir.</li>
+<li>Surat keterangan kematian dari pejabat berwenang.</li>
+<li>Surat pernyataan tidak pernah dijatuhi hukuman disiplin.</li>
+</ul>
+
 </div>
 
 <!-- ================= WEWENANG ================= -->
 <div class="card">
 <h2>Wewenang</h2>
 <ul>
-<li>Kenaikan pangkat golongan III/a sampai III/d menjadi kewenangan Panglima TNI yang didelegasikan kepada Kasad.</li>
-
-<li>Pelaksanaan dilakukan oleh Dirjenad atas nama Kasad setelah mendapat persetujuan teknis dari BKN.</li>
-
-<li>Kenaikan pangkat golongan I/b sampai II/d juga didelegasikan kepada Kasad melalui satuan terkait, dengan persetujuan teknis dari Kantor Regional BKN.</li>
+<li>Kewenangan berada pada Kepala BKN.</li>
+<li>Diproses melalui Kantor Regional (Kakanreg) BKN.</li>
+<li>Ditetapkan setelah memenuhi seluruh persyaratan administrasi.</li>
 </ul>
 </div>
 
