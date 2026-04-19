@@ -1323,3 +1323,13 @@ margin-top:15px;
 * {
   box-sizing: border-box;
 }
+.cek-card {
+  width: 100%;
+  max-width: 100%;
+}
+.container {
+  padding: 0 10px;
+}
+html, body {
+  overflow-x: hidden;
+}
