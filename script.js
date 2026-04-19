@@ -465,6 +465,9 @@ document.querySelectorAll(".kp-header").forEach(header => {
   });
 });
 
+
+
+
 // smart checklist
 document.querySelectorAll(".kp-card").forEach(card => {
 

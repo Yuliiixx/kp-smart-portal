@@ -915,3 +915,169 @@ margin-top:15px;
     background: rgba(255,255,255,0.05);
     backdrop-filter: blur(10px);
 }
+
+.hero-images {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.hero-img-logo {
+    width: 200px;   /* samakan ukuran */
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.hero-img-kaajen {
+    width: 350px;   /* samakan ukuran */
+    height: 350px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+
+/* ======================================================
+   JENIS KP (STYLE SAMA DENGAN MY PORTFOLIO)
+====================================================== */
+
+/* container section */
+#jenis-kp {
+  padding: 50px 0;
+}
+
+/* ==============================
+   GRID LAYOUT (SAMA PORTOFOLIO)
+============================== */
+.work-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 40px;
+  margin-top: 50px;
+}
+
+/* ==============================
+   CARD
+============================== */
+.work {
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* ==============================
+   IMAGE
+============================== */
+.work img {
+  width: 100%;
+  height: 300px; /* 🔥 biar semua card sama tinggi */
+  object-fit: cover;
+  border-radius: 10px;
+  display: block;
+  transition: transform 0.5s;
+}
+
+/* ==============================
+   OVERLAY
+============================== */
+.layer {
+  width: 100%;
+  height: 0;
+  background: linear-gradient(rgba(0,0,0,0.6), #07301c);
+  border-radius: 10px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  padding: 0 40px;
+  text-align: center;
+  font-size: 14px;
+
+  transition: height 0.5s;
+}
+
+/* ==============================
+   TEXT
+============================== */
+.layer h3 {
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+/* ==============================
+   ICON BULAT
+============================== */
+.layer a {
+  margin-top: 20px;
+  color: #01381d;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 60px;
+  background: #fff;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  text-align: center;
+}
+
+/* ==============================
+   HOVER EFFECT
+============================== */
+
+/* zoom gambar */
+.work:hover img {
+  transform: scale(1.1);
+}
+
+/* overlay naik */
+.work:hover .layer {
+  height: 100%;
+}
+
+
+/* ================= GALERI ================= */
+#galeri {
+  padding: 60px 0;
+}
+
+.slider {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.slide-track {
+  display: flex;
+  width: calc(250px * 16);
+  animation: scroll 60s linear infinite;
+}
+
+.slide-track img {
+  width: 220px;
+  height: 140px;
+  object-fit: cover;
+  margin: 10px;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.slide-track img:hover {
+  transform: scale(1.1);
+}
+
+/* ANIMASI GERAK */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
