@@ -1354,7 +1354,6 @@ margin-top:15px;
     gap: 20px;
   }
 
-  /* Susun isi kiri jadi ke bawah */
   .hero-top {
     display: flex;
     flex-direction: column;
@@ -1362,9 +1361,9 @@ margin-top:15px;
     gap: 12px;
   }
 
-  /* Gambar di atas */
+  /* 🔥 Gambar diperbesar */
   .hero-img-kaajen {
-    width: 80px;
+    width: 120px; /* sebelumnya 80px */
     height: auto;
   }
 
@@ -1374,17 +1373,18 @@ margin-top:15px;
     color: #777;
   }
 
+  /* 🔥 Judul diperkecil */
   .hero-title {
-    font-size: 22px;
+    font-size: 18px; /* sebelumnya 22px */
     line-height: 1.4;
   }
 
   .hero-desc {
     font-size: 14px;
-    padding: 0 5px;
+    padding: 0 8px;
   }
 
-  /* BOX pindah ke paling bawah */
+  /* BOX */
   .hero-box {
     width: 100%;
     max-width: 320px;
@@ -1395,7 +1395,7 @@ margin-top:15px;
   }
 
   .hero-box h3 {
-    font-size: 18px;
+    font-size: 17px;
     margin-bottom: 10px;
   }
 
