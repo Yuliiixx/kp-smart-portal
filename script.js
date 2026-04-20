@@ -561,32 +561,7 @@ document.addEventListener("DOMContentLoaded", function () {
     track.style.transform = `translateX(${position}px)`;
   }
 
-  // ================= BUTTON =================
-  nextBtn.addEventListener("click", () => {
-    stopAutoSlide();
-
-    track.classList.add("fast");
-    moveNext();
-
-    setTimeout(() => {
-      track.classList.remove("fast");
-    }, 150);
-
-    startAutoSlide();
-  });
-
-  prevBtn.addEventListener("click", () => {
-    stopAutoSlide();
-
-    track.classList.add("fast");
-    movePrev();
-
-    setTimeout(() => {
-      track.classList.remove("fast");
-    }, 150);
-
-    startAutoSlide();
-  });
+  
 
   // ================= HOVER =================
   slider.addEventListener("mouseenter", stopAutoSlide);
