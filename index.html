@@ -19,51 +19,54 @@
 <nav>
   <div class="hero-images">
     <img src="images/logo.png" alt="Logo" class="hero-img-logo">
-    
-</div>
     <h1 class="logo">KP <span>Smart Portal</span></h1>
+</div>
+    
    
-    <ul id="sidemenu">
+    <!-- <ul id="sidemenu">
         <li><a href="#home">Home</a></li>
-        <li><a href="#dashboard">Dashboard</a></li>
-        <li><a href="#alur">Alur</a></li>
-        <li><a href="#checklist">Checklist</a></li>
+        <li><a href="#dashboard">Smart Dashboard</a></li>
+        <li><a href="#jenis-kp">Jenis KP</a></li>
+        <li><a href="#alur">Alur Proses</a></li>
+        <li><a href="#checklist">Smart Checklist Administrasi</a></li>
+        <li><a href="#cek-kp">Cek KP</a></li>
         <li><a href="#faq">FAQ</a></li>
         <li><a href="#contact">Saran</a></li>
-        <!-- <i class="fas fa-times" onclick="closemenu()"></i> -->
-    </ul>
+        <i class="fas fa-times" onclick="closemenu()"></i>
+    </ul> -->
 
     <!-- <i class="fas fa-bars" onclick="openmenu()"></i> -->
 </nav>
 
 <div class="hero-content">
 
-    <div class="hero-text">
-      <div class="hero-images">
-   
-    <img src="images/kaajen.png" alt="Ajendam" class="hero-img-kaajen">
-</div>
+  <!-- KIRI -->
+  <div class="hero-text">
+
+    <div class="hero-top">
+      <img src="images/kaajen.png" alt="Ajendam" class="hero-img-kaajen">
+
+      <div class="hero-info">
         <div>Sistem Informasi Digital</div>
 
-        <h1>
-            Selamat Datang di <br>
-            <span>KP Smart Portal</span>
+        <h1 class="hero-title">
+          Selamat Datang di <br>
+          <span>KP Smart Portal</span>
         </h1>
 
         <p class="hero-desc">
-            Platform digital terpadu untuk optimalisasi monitoring dan
-            penyebaran informasi kenaikan pangkat PNS secara transparan,
-            terstandar, dan tepat waktu.
+          Platform digital terpadu untuk optimalisasi monitoring dan
+          penyebaran informasi kenaikan pangkat PNS secara transparan,
+          terstandar, dan tepat waktu.
         </p>
-
-       
+      </div>
     </div>
 
-   <div class="hero-box">
-    
-    <h3>Periode KP</h3>
+  </div>
 
-    <p class="status-open">2 PERIODE DALAM SETAHUN</p>
+  <!-- KANAN (PINDAH KE SINI) -->
+  <div class="hero-box">
+    <h3>Periode KP</h3>
 
     <hr>
 
@@ -72,11 +75,9 @@
 
     <p style="margin-top:10px;">Semester 2</p>
     <strong>Juli - Desember</strong>
-</div>
+  </div>
 
 </div>
-</div>
-</section>
 
 <!-- ================= DASHBOARD ================= -->
 <section id="dashboard">
@@ -251,11 +252,11 @@ document.addEventListener("DOMContentLoaded", function() {
 
     <div class="kp-grid">
 
-      <!-- ================= REGULER ================= -->
+      <!-- REGULER -->
       <div class="kp-card">
         <div class="kp-header">
           <div>
-            <h3>📄 Kenaikan Pangkat Reguler</h3>
+            <h3>📄 KP Reguler</h3>
             <p>Masa kerja & administrasi</p>
           </div>
           <span class="icon">＋</span>
@@ -266,91 +267,98 @@ document.addEventListener("DOMContentLoaded", function() {
 
           <div class="checklist">
             <label><input type="checkbox"> Surat usul dari Kotama/Balakpus</label>
-            <label><input type="checkbox"> Fotokopi Karpeg</label>
-            <label><input type="checkbox"> Fotokopi Kep KP terakhir</label>
-            <label><input type="checkbox"> Fotokopi Kep CPNS & PNS</label>
-            <label><input type="checkbox"> Fotokopi Kep jabatan</label>
-            <label><input type="checkbox"> Fotokopi ijazah terakhir</label>
-            <label><input type="checkbox"> Fotokopi SKP / PPK 2 tahun terakhir</label>
-            <label><input type="checkbox"> Daftar Riwayat Hidup (DRH)</label>
+            <label><input type="checkbox"> Karpeg</label>
+            <label><input type="checkbox"> Kep KP terakhir</label>
+            <label><input type="checkbox"> Kep CPNS & PNS</label>
+            <label><input type="checkbox"> Kep jabatan</label>
+            <label><input type="checkbox"> Ijazah terakhir</label>
+            <label><input type="checkbox"> SKP / PPK 2 tahun terakhir</label>
+            <label><input type="checkbox"> DRH</label>
           </div>
 
-         
-<a href="https://docs.google.com/forms/d/e/1FAIpQLSehD93vMCHygylKS5acu5RhOFyAnb-gi8LzoT0QaPpEehJ3bA/viewform?usp=publish-editor" target="_blank">
-  <button class="btn-submit" >Kirim Usulan</button>
-</a>
-
-<div class="catatan">
-  <p>📌 <strong>Catatan:</strong></p>
-  <ul>
-    <li>Penginputan dilakukan oleh <strong>Spers satuan</strong></li>
-    <li>Berkas <strong>hardcopy</strong> dikirim langsung ke <strong>Ajendam</strong></li>
-  </ul>
-</div>
-        </div>
-      </div>
-
-      <!-- ================= PILIHAN FUNGSIONAL ================= -->
-      <div class="kp-card">
-        <div class="kp-header">
-          <div>
-            <h3>⭐ KP Pilihan (Fungsional)</h3>
-            <p>Berdasarkan angka kredit jabatan</p>
-          </div>
-          <span class="icon">＋</span>
-        </div>
-
-        <div class="kp-content">
-          <div class="progress-bar"><div class="progress"></div></div>
-
-          <div class="checklist">
-            <label><input type="checkbox"> Surat usul dari Kotama/Balakpus</label>
-            <label><input type="checkbox"> Fotokopi Karpeg</label>
-            <label><input type="checkbox"> Fotokopi Kep CPNS & PNS</label>
-            <label><input type="checkbox"> Fotokopi Kep KP terakhir</label>
-            <label><input type="checkbox"> Fotokopi Kep jabatan definitif</label>
-            <label><input type="checkbox"> Fotokopi ijazah terakhir</label>
-            <label><input type="checkbox"> PPK 2 tahun terakhir</label>
-            <label><input type="checkbox"> DSP</label>
-            <label><input type="checkbox"> Penetapan Angka Kredit (PAK)</label>
-            <label><input type="checkbox"> DPP Gaji terakhir</label>
-            <label><input type="checkbox"> Nilai Kesegaran Jasmani (IV/a ke atas)</label>
-          </div>
-
-          <a href="https://docs.google.com/forms/d/e/1FAIpQLSehD93vMCHygylKS5acu5RhOFyAnb-gi8LzoT0QaPpEehJ3bA/viewform?usp=publish-editor" target="_blank">
+          <a href="#" target="_blank">
             <button class="btn-submit">Kirim Usulan</button>
           </a>
         </div>
       </div>
 
-      <!-- ================= PILIHAN STRUKTURAL ================= -->
+      <!-- FUNGSIONAL -->
       <div class="kp-card">
         <div class="kp-header">
           <div>
-            <h3>🏢 KP Pilihan (Struktural)</h3>
-            <p>1 tingkat di bawah jenjang jabatan</p>
+            <h3>⭐ KP Fungsional</h3>
+            <p>Berdasarkan angka kredit</p>
           </div>
           <span class="icon">＋</span>
         </div>
 
         <div class="kp-content">
-          <div class="progress-bar"><div class="progress"></div></div>
-
           <div class="checklist">
-            <label><input type="checkbox"> Surat usul dari Kotama/Balakpus</label>
-            <label><input type="checkbox"> Fotokopi Karpeg</label>
-            <label><input type="checkbox"> Fotokopi Kep CPNS & PNS</label>
-            <label><input type="checkbox"> Fotokopi Kep KP terakhir</label>
-            <label><input type="checkbox"> Fotokopi Kep jabatan definitif</label>
-            <label><input type="checkbox"> Fotokopi ijazah terakhir</label>
-            <label><input type="checkbox"> PPK 2 tahun terakhir</label>
+            <label><input type="checkbox"> Surat usul</label>
+            <label><input type="checkbox"> Karpeg</label>
+            <label><input type="checkbox"> Kep CPNS & PNS</label>
+            <label><input type="checkbox"> Kep KP terakhir</label>
+            <label><input type="checkbox"> Kep jabatan</label>
+            <label><input type="checkbox"> Ijazah</label>
+            <label><input type="checkbox"> PPK 2 tahun</label>
             <label><input type="checkbox"> DSP</label>
-            <label><input type="checkbox"> DPP Gaji terakhir</label>
+            <label><input type="checkbox"> PAK</label>
           </div>
 
-          <a href="https://docs.google.com/forms/d/e/1FAIpQLSehD93vMCHygylKS5acu5RhOFyAnb-gi8LzoT0QaPpEehJ3bA/viewform?usp=publish-editor" target="_blank">
-            <button class="btn-submit">Kirim Usulan</button>
-          </a>
+          <button class="btn-submit">Kirim Usulan</button>
+        </div>
+      </div>
+
+      <!-- STRUKTURAL -->
+      <div class="kp-card">
+        <div class="kp-header">
+          <div>
+            <h3>🏢 KP Struktural</h3>
+            <p>Sesuai jabatan</p>
+          </div>
+          <span class="icon">＋</span>
+        </div>
+
+        <div class="kp-content">
+          <div class="checklist">
+            <label><input type="checkbox"> Surat usul</label>
+            <label><input type="checkbox"> Karpeg</label>
+            <label><input type="checkbox"> Kep CPNS & PNS</label>
+            <label><input type="checkbox"> Kep KP terakhir</label>
+            <label><input type="checkbox"> Kep jabatan</label>
+            <label><input type="checkbox"> Ijazah</label>
+            <label><input type="checkbox"> PPK 2 tahun</label>
+            <label><input type="checkbox"> DSP</label>
+          </div>
+
+          <button class="btn-submit">Kirim Usulan</button>
+        </div>
+      </div>
+
+      <!-- PENYESUAIAN IJAZAH -->
+      <div class="kp-card">
+        <div class="kp-header">
+          <div>
+            <h3>🎓 Penyesuaian Ijazah</h3>
+            <p>Berdasarkan pendidikan</p>
+          </div>
+          <span class="icon">＋</span>
+        </div>
+
+        <div class="kp-content">
+          <div class="checklist">
+            <label><input type="checkbox"> Surat usul</label>
+            <label><input type="checkbox"> Karpeg</label>
+            <label><input type="checkbox"> Kep CPNS & PNS</label>
+            <label><input type="checkbox"> Kep KP terakhir</label>
+            <label><input type="checkbox"> Kep jabatan</label>
+            <label><input type="checkbox"> Ijazah (legalisir)</label>
+            <label><input type="checkbox"> PPK 1 tahun</label>
+            <label><input type="checkbox"> Uraian tugas</label>
+            <label><input type="checkbox"> Izin belajar</label>
+          </div>
+
+          <button class="btn-submit">Kirim Usulan</button>
         </div>
       </div>
 

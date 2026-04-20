@@ -1320,3 +1320,22 @@ margin-top:15px;
 
 }
 
+.hero-title {
+  font-size: 48px;
+  line-height: 1.2;
+  white-space: nowrap; /* ini yang bikin tidak turun */
+}
+
+.hero-title span {
+  color: #00e676;
+}
+
+.hero-box {
+  flex: 0.4;              /* lebih kecil dari sebelumnya */
+  max-width: 240px;      /* batasi lebar */
+  min-width: 180px;      /* tetap aman */
+  background: #1c1c1c;
+  padding: 12px;         /* diperkecil */
+  border-radius: 10px;
+  font-size: 13px;       /* teks lebih compact */
+}
