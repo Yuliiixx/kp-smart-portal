@@ -1414,34 +1414,17 @@ margin-top:15px;
 }
 
 /* ============================= */
-/* ANDROID VIEW (STACK KE BAWAH) */
+/* ANDROID FIX (PASTI KE BAWAH)  */
 /* ============================= */
 @media (max-width: 768px) {
 
   .kp-grid {
-    display: flex;
-    flex-direction: column;
+    display: grid !important;
+    grid-template-columns: 1fr !important; /* 1 kolom */
     gap: 15px;
   }
 
   .kp-card {
-    width: 100%;
-  }
-
-  .section-title {
-    text-align: center;
-    font-size: 20px;
-  }
-
-  .kp-header h3 {
-    font-size: 16px;
-  }
-
-  .kp-header p {
-    font-size: 12px;
-  }
-
-  .btn-submit {
     width: 100%;
   }
 
