@@ -877,7 +877,7 @@ margin-top:15px;
     padding: 25px 35px;
     border-radius: 15px;
     text-align: center;
-    min-width: 300px;
+    min-width: 500px;
     box-shadow: 0 0 20px rgba(0,0,0,0.5);
 }
 
@@ -1331,11 +1331,84 @@ margin-top:15px;
 }
 
 .hero-box {
-  flex: 0.4;              /* lebih kecil dari sebelumnya */
+  flex: 0.9;              /* lebih kecil dari sebelumnya */
   max-width: 240px;      /* batasi lebar */
   min-width: 180px;      /* tetap aman */
   background: #1c1c1c;
   padding: 12px;         /* diperkecil */
   border-radius: 10px;
   font-size: 13px;       /* teks lebih compact */
+}
+
+@media (max-width: 1024px) {
+  .kp-grid {
+    grid-template-columns: repeat(2, 1fr); /* jadi 2 kolom */
+  }
+}
+
+@media (max-width: 600px) {
+  .kp-grid {
+    grid-template-columns: 1fr; /* jadi 1 kolom */
+  }
+}
+.kp-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 kolom sejajar */
+  gap: 20px;
+}
+
+.kp-card {
+  width: 100%;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+
+  max-width: 1400px; /* diperlebar */
+  margin: 0 auto;
+}
+
+/* HERO BOX LEBIH BESAR */
+.hero-box {
+  max-width: 700px;       /* diperlebar */
+  width: 100%;
+  margin: 40px auto;      /* posisi tengah */
+
+  padding: 40px 30px;     /* lebih tebal */
+  border-radius: 18px;
+
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(10px);
+
+  box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+  text-align: center;
+}
+
+/* JUDUL */
+.hero-box h3 {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+/* GARIS */
+.hero-box hr {
+  margin: 15px 0;
+  border: none;
+  height: 1px;
+  background: rgba(255,255,255,0.2);
+}
+
+/* TEXT */
+.hero-box p {
+  font-size: 16px;
+  margin: 5px 0;
+}
+
+/* TEKS TEBAL */
+.hero-box strong {
+  font-size: 18px;
+  display: block;
+  margin-bottom: 10px;
 }

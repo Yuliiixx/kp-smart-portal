@@ -9,8 +9,6 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
 <style>
-
-/* ================= GLOBAL ================= */
 body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
@@ -24,7 +22,6 @@ body {
   margin: auto;
 }
 
-/* ================= HEADER ================= */
 .header {
   text-align: center;
   padding: 50px 20px;
@@ -38,12 +35,12 @@ body {
   color: #aaa;
 }
 
-/* ================= TAB ================= */
 .tab-menu {
   display: flex;
   justify-content: center;
   gap: 10px;
   margin-bottom: 20px;
+  flex-wrap: wrap;
 }
 
 .tab-menu button {
@@ -53,7 +50,6 @@ body {
   color: white;
   border-radius: 6px;
   cursor: pointer;
-  transition: 0.3s;
 }
 
 .tab-menu button.active,
@@ -62,7 +58,6 @@ body {
   color: black;
 }
 
-/* ================= CARD ================= */
 .card {
   display: none;
   background: #1c1c1c;
@@ -83,11 +78,10 @@ ul {
 }
 
 li {
-  margin-bottom: 8px;
-  line-height: 1.6;
+  margin-bottom: 10px;
+  line-height: 1.7;
 }
 
-/* ================= BUTTON ================= */
 .back {
   display: block;
   margin: 40px auto;
@@ -98,7 +92,6 @@ li {
   border-radius: 8px;
   width: fit-content;
 }
-
 </style>
 </head>
 
@@ -106,28 +99,29 @@ li {
 
 <div class="container">
 
-<!-- HEADER -->
 <div class="header">
   <h1>Kenaikan Pangkat Anumerta</h1>
-  <p>Penghargaan negara bagi PNS yang wafat dalam pengabdian</p>
+  <p>Sesuai ketentuan administrasi PNS</p>
 </div>
 
-<!-- MENU -->
 <div class="tab-menu">
   <button class="tab-btn active" onclick="showTab(0)">Persyaratan Umum</button>
   <button class="tab-btn" onclick="showTab(1)">Administrasi</button>
-  <button class="tab-btn" onclick="showTab(2)">Wewenang</button>
 </div>
 
 <!-- ================= UMUM ================= -->
 <div class="card active">
 <h2>Persyaratan Umum</h2>
 <ul>
-<li>Diberikan kepada PNS yang meninggal dunia sebagai penghargaan atas jasa dan pengabdiannya.</li>
-<li>Berlaku sejak tanggal wafat.</li>
-<li>Ditetapkan sebelum pemakaman.</li>
-<li>CPNS dapat diangkat menjadi PNS dan dinaikkan pangkatnya.</li>
-<li>Dapat dibuat keputusan sementara sebelum keputusan definitif.</li>
+<li>Tewas atas pengabdian dan jasanya kepada negara dan bangsa;</li>
+
+<li>Dimulai tanggal PNS yang bersangkutan tewas;</li>
+
+<li>Diberikan sebelum PNS tersebut dimakamkan;</li>
+
+<li>Bagi calon Pegawai Negeri Sipil yang tewas diangkat menjadi Pegawai Negeri Sipil, ditetapkan mulai awal bulan yang bersangkutan tewas dan dinaikkan pangkatnya setingkat lebih tinggi; dan</li>
+
+<li>Ditetapkan Kep sementara kenaikan pangkat Anumerta oleh Kaajen Kotama/Sesbalakpus/Dirbinlem sebelum Kep definitif ditetapkan.</li>
 </ul>
 </div>
 
@@ -135,30 +129,28 @@ li {
 <div class="card">
 <h2>Persyaratan Administrasi</h2>
 <ul>
-<li>Surat usul dari Kotama/Balakpus.</li>
-<li>Fotokopi Karpeg.</li>
-<li>Fotokopi SK Pangkat terakhir.</li>
-<li>Fotokopi SK/Sprin jabatan.</li>
-<li>Fotokopi surat penugasan / SK CPNS/PNS.</li>
-<li>Fotokopi visum dari dokter.</li>
-<li>Fotokopi berita acara dari kepolisian.</li>
-<li>Laporan kejadian dari satuan (minimal eselon III).</li>
+<li>Surat usul dari Kotama/Balakpus;</li>
+
+<li>Fotokopi Karpeg;</li>
+
+<li>Fotokopi Kep KP terakhir;</li>
+
+<li>Fotokopi Kep/Sprin jabatan;</li>
+
+<li>Fotokopi Sprin penugasan atau Kep Capeg/PNS tewas;</li>
+
+<li>Fotokopi visum et repertum dari dokter;</li>
+
+<li>Fotokopi berita acara kejadian dari kepolisian;</li>
+
+<li>Fotokopi laporan kejadian dari kesatuan oleh pejabat minimal eselon III/golongan jabatan VI;</li>
+
+<li>Surat keterangan kematian dari pejabat yang berwenang; dan</li>
+
+<li>Fotokopi Kep sementara KP Anumerta minimal dari Dan/Ka Satminkal.</li>
 </ul>
 </div>
 
-<!-- ================= WEWENANG ================= -->
-<div class="card">
-<h2>Wewenang</h2>
-<ul>
-<li>Kewenangan Panglima TNI.</li>
-<li>Didelegasikan kepada Kasad.</li>
-<li>Diproses oleh Dirjenad.</li>
-<li>Dengan persetujuan teknis BKN.</li>
-<li>Dapat diawali dengan keputusan sementara.</li>
-</ul>
-</div>
-
-<!-- BUTTON -->
 <a href="index.html" class="back">← Kembali</a>
 
 </div>
